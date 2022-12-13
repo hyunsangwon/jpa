@@ -8,4 +8,3 @@ spring:
       database: mysql
       hibernate:
          ddl-auto: create
-         

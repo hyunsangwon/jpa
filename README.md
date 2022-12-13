@@ -2,7 +2,7 @@
 JPA 수업 😴 22.12.08 ~ 
 
 #### 참고사이트
-- https://covenant.tistory.com/243
+- https://www.bezkoder.com/spring-boot-jpa-crud-rest-api/
 
 ### VSCode 필요한 확장프로그램
 - Sprinb Boot Tools
