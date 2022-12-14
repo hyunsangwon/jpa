@@ -5,7 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 
 
@@ -23,7 +28,18 @@ public class Users {
     private Integer salary;
     @Column(name="age")
     private Integer age;
+
+    @ManyToOne
+	@JoinColumn(name = "dept_id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
+	private Dept dept;
     
+	public Dept getDept() {
+		return dept;
+	}
+	public void setDept(Dept dept) {
+		this.dept = dept;
+	}
 	public Long getId() {
 		return id;
 	}
