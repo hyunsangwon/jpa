@@ -21,6 +21,11 @@ public class UserController {
 	@Autowired
 	UserService service;
 	
+	@PostMapping("/api/v1/login")
+	public boolean callLogin(@RequestBody Users user) {
+		return true;
+	}
+	
     @GetMapping("/api/v1/users")
     public List<Users> callAllUser(){
         return service.getAllUser();

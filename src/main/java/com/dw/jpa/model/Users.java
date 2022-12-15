@@ -22,14 +22,18 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="id")
     private Long id;
-    @Column(name="name")
+    @Column(name="name",length = 30, nullable = false)
     private String name;
     @Column(name="salary")
     private Integer salary;
     @Column(name="age")
     private Integer age;
-
-    @ManyToOne
+    @Column(name="user_id" ,length = 30)
+    private String userId;
+    @Column(name="user_pw")
+    private String userPw;
+    
+	@ManyToOne
 	@JoinColumn(name = "dept_id")
     @OnDelete(action = OnDeleteAction.CASCADE)
 	private Dept dept;
@@ -39,6 +43,18 @@ public class Users {
 	}
 	public void setDept(Dept dept) {
 		this.dept = dept;
+	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	public String getUserPw() {
+		return userPw;
+	}
+	public void setUserPw(String userPw) {
+		this.userPw = userPw;
 	}
 	public Long getId() {
 		return id;

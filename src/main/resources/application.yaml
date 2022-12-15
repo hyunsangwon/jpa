@@ -3,7 +3,7 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/dw_501?useUnicode=true&charaterEncoding=utf-8&serverTimezone=UTC
       username: root
-      password: tkddnjs0823
+      password: qwer
    # hibernate.ddl.auto option : 
    # create: 기존테이블 삭제 후 다시 생성 (DROP + CREATE)
    # create-drop: create와 같으나 종료시점에 테이블 DROP

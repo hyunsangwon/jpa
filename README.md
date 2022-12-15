@@ -20,3 +20,18 @@ JPA 수업 😴 22.12.08 ~
 
 #### 참고사이트
 - https://www.bezkoder.com/spring-boot-jpa-crud-rest-api
+
+
+### @ManyToOne에서 INSERT할 때
+```json
+{
+    "id": 6,
+    "name": "현상원",
+    "salary": 3000,
+    "age": 30,
+    "dept": {
+        "deptId": 1,
+        "dname": null
+    }
+}
+```
