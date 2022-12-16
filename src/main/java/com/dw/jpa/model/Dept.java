@@ -5,12 +5,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
-@Table(name="dw_dept_test")
+@Table(name="dw_dept")
+@Getter
+@Setter
 public class Dept {
 	
 	@Id
@@ -20,20 +23,4 @@ public class Dept {
 	@Column
 	private String dname;//부서이름
 
-	
-	public long getDeptId() {
-		return deptId;
-	}
-
-	public void setDeptId(long deptId) {
-		this.deptId = deptId;
-	}
-
-	public String getDname() {
-		return dname;
-	}
-
-	public void setDname(String dname) {
-		this.dname = dname;
-	}
 }

@@ -11,7 +11,11 @@ spring:
    # validate: 엔티티와 테이블이 정상 매핑되었는지만 확인
    # none: 사용하지 않음
    jpa:
-      database: mysql
-      generate-ddl: true
-      hibernate.ddl.auto: update
-      show-sql: true
+    database: mysql
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
